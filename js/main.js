@@ -13,8 +13,10 @@ function setup(){
 
 function draw(){
     Ctx.fillStyle = 'blue';
-    Ctx.fillRect (0, 0, window.innerWidth, window.innerHeight)
+    Ctx.fillRect (0, 0, window.innerWidth, window.innerHeight);
 }
 
 setup()
 draw()
+
+ console.log("Deu certo");
