@@ -1,7 +1,7 @@
 /* declarando variáveis*/
 const canvasEl = document.getElementById("canvas");
 const Ctx = canvasEl.getContext("2d");
-
+const espessura = 15;
 
 
 function setup(){
@@ -14,9 +14,11 @@ function setup(){
 function draw(){
     Ctx.fillStyle = 'blue';
     Ctx.fillRect (0, 0, window.innerWidth, window.innerHeight);
+
+    Ctx.fillStyle = 'white';
+    Ctx.fillRect (window.innerWidth / 2 - espessura / 2, 0, espessura, window.innerHeight);
 }
 
 setup()
 draw()
 
- console.log("Deu certo");
