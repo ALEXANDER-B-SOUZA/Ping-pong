@@ -24,6 +24,11 @@ function draw(){
     /*Criando raquete esquerda*/
     Ctx.fillStyle = 'white';
     Ctx.fillRect(window.innerWidth - espessura - raquete, 300, espessura, 200);
+    /*Criando a bola.*/
+    Ctx.fillStyle = 'white';
+    Ctx.beginPath()
+    Ctx.arc(120, 240, 25, 0, 2 * Math.PI, false)
+    Ctx.fill()
 }
 
 setup()
