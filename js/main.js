@@ -49,7 +49,7 @@ draw: function() {
 }
 
 const bola = {
- x: 120,
+ x: 400,
  y: 240,
  r: 25,
 draw: function() {
