@@ -63,19 +63,34 @@ const bola = {
  y: campo.h / 2,
  r: 20,
  velocidade: 3,
- posição: function(){
-
+ direçãox: 1,
+ direçãoy: 1,
+ _posição: function(){
+  if(
+    (this.y - this.r < 0 && this.direçãoy < 0) ||
+    (this.y > campo.h - this.r && this.direçãoy > 0)
+    ){
+    this._revertey()
+  }
  },
+
+ _revertex: function (){
+  this.direçãox *= -1
+ },
+
+ _revertey: function (){
+  this.direçãoy *= -1
+ }, 
  _move: function(){
-  this.x += this.velocidade
-  this.y += this.velocidade
+  this.x += this.direçãox * this.velocidade
+  this.y += this.direçãoy * this.velocidade
  },
 draw: function() {
     Ctx.fillStyle = 'white';
     Ctx.beginPath()
     Ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false)
     Ctx.fill()
-
+    this._posição()
     this._move()
   } ,
 }
