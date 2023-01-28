@@ -66,6 +66,23 @@ const bola = {
  direçãox: 1,
  direçãoy: 1,
  _posição: function(){
+  if (this.x > campo.w - this.r - raqdireita.w - espessura){
+    if (this.y -this.r > raqdireita.y && this.y - this.r < raqdireita.y + raqdireita.h){
+      this._revertex()
+    } else{
+
+    }
+  }
+
+  if (this.x < this.r + raqesquerda.w + espessura){
+    if (this.y + this.r > raqesquerda.y && this.y - this.r < raqesquerda.y + raqesquerda.h){
+      this._revertex()
+    } else{
+
+    }
+  }
+
+
   if(
     (this.y - this.r < 0 && this.direçãoy < 0) ||
     (this.y > campo.h - this.r && this.direçãoy > 0)
