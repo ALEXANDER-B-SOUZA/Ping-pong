@@ -35,12 +35,12 @@ const ponto = {
       this.computador++
     },
     draw: function () {
-      canvasCtx.font = "bold 72px Arial"
-      canvasCtx.textAlign = "center"
-      canvasCtx.textBaseline = "top"
-      canvasCtx.fillStyle = "#01341D"
-      canvasCtx.fillText(this.humano, campo.w / 4, 50)
-      canvasCtx.fillText(this.computador, campo.w / 2 + campo.w / 4, 50)
+      Ctx.font = "bold 72px Arial"
+      Ctx.textAlign = "center"
+      Ctx.textBaseline = "top"
+      Ctx.fillStyle = "#01341D"
+      Ctx.fillText(this.humano, campo.w / 4, 50)
+      Ctx.fillText(this.computador, campo.w / 2 + campo.w / 4, 50)
     },
 }
 
@@ -141,14 +141,11 @@ function setup(){
 
 function draw(){
     campo.draw()
-    linha.draw()
-   
-    
+    linha.draw()  
+    ponto.draw()
     raqdireita.draw()
     raqesquerda.draw()
-    bola.draw() 
-
-     
+    bola.draw()    
     
   }
 
