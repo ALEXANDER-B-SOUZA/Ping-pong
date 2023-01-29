@@ -19,10 +19,29 @@ const campo = {
 const linha = {
   w: 15,
   h: campo.h,
-  draw: function() { 
+  draw: function () { 
     Ctx.fillStyle = 'white';
     Ctx.fillRect (campo.w / 2 - this.w / 2, 0, this.w, this.h);
   } ,
+}
+
+const ponto = {
+  humano: 0,
+  computador: 0,
+  increaseHumano: function () {
+    this.humano++
+    },
+    increaseComputador: function () {
+      this.computador++
+    },
+    draw: function () {
+      canvasCtx.font = "bold 72px Arial"
+      canvasCtx.textAlign = "center"
+      canvasCtx.textBaseline = "top"
+      canvasCtx.fillStyle = "#01341D"
+      canvasCtx.fillText(this.humano, campo.w / 4, 50)
+      canvasCtx.fillText(this.computador, campo.w / 2 + campo.w / 4, 50)
+    },
 }
 
 /* Criando raquete direita.*/
@@ -123,9 +142,13 @@ function setup(){
 function draw(){
     campo.draw()
     linha.draw()
+   
+    
     raqdireita.draw()
     raqesquerda.draw()
     bola.draw() 
+
+     
     
   }
 
