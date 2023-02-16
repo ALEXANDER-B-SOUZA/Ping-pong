@@ -1,4 +1,5 @@
 /* declarando variáveis*/
+
 const canvasEl = document.getElementById("canvas");
 const Ctx = canvasEl.getContext("2d");
 const espessura = 15;
